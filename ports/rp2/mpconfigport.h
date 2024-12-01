@@ -108,7 +108,7 @@
 
 // Fine control over Python builtins, classes, modules, etc
 #define MICROPY_PY_BUILTINS_HELP_TEXT           rp2_help_text
-#define MICROPY_PY_SYS_PLATFORM                 "rp2"
+#define MICROPY_PY_SYS_PLATFORM                 "mint"
 #ifndef MICROPY_PY_THREAD
 #define MICROPY_PY_THREAD                       (1)
 #define MICROPY_PY_THREAD_GIL                   (0)
@@ -209,7 +209,7 @@
 #define MICROPY_PY_WEBSOCKET            (1)
 #endif
 #ifndef MICROPY_PY_WEBREPL
-#define MICROPY_PY_WEBREPL              (1)
+#define MICROPY_PY_WEBREPL              (0)
 #endif
 #endif
 
@@ -268,7 +268,7 @@ extern const struct _mp_obj_type_t mod_network_nic_type_wiznet5k;
 #define MICROPY_HW_USB_VID (0x2E8A) // Raspberry Pi
 #endif
 #ifndef MICROPY_HW_USB_PID
-#define MICROPY_HW_USB_PID (0x0005) // RP2 MicroPython
+#define MICROPY_HW_USB_PID (0x10B9) // PicoScratch MINT
 #endif
 
 #ifndef MICROPY_HW_BOOTSEL_DELAY_US
@@ -314,3 +314,7 @@ extern void lwip_lock_release(void);
 #ifndef MICROPY_BOARD_END_SOFT_RESET
 #define MICROPY_BOARD_END_SOFT_RESET()
 #endif
+
+#define MICROPY_HW_USB_MANUFACTURER_STRING "PicoScratch"
+#define MICROPY_HW_USB_PRODUCT_FS_STRING "MINT"
+#define MICROPY_HW_USB_MSC_INQUIRY_VENDOR_STRING "PicoScratch"
